@@ -1,0 +1,26 @@
+DECLARE str : STRING
+DECLARE MyChar : CHARACTER
+DECLARE Alphabets : INTEGER
+DECLARE NotAlphabets : INTEGER
+DECLARE Counter : INTEGER
+
+str = ""
+MyChar = ''
+Alphabets = 0
+NotAlphabets = 0
+counter= 0
+
+OUTPUT "ENTER STRING: "
+INPUT str
+
+FOR Counter = 1 TO LENGTH(str)
+MyChar = MID(str, counter, 1)
+IF LOWER(MyChar) >= "a" AND LOWER(MyChar) <= "z"
+  THEN
+      Alphabets = Alphabets + 1
+ELSE
+      NotAlphabets = NotAlphabets + 1
+ENDIF
+NEXT Counter
+
+OUTPUT " NUMBER OF ALPHABETS ARE " & Alphabets & " AND NIMBER OF CHARACTERS ARE " & NotAlphabets"
