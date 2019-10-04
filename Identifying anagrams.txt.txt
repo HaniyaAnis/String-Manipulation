@@ -1,0 +1,37 @@
+
+DECALRE string1 : STRING
+DECALRE string2 : STRING
+DECLARE Counter : INTEGER
+DECALRE var1: INTEGER
+DECLARE var2 : INTEGER
+
+string1 = ""
+string2 = ""
+counter = 0
+var1 = 0
+var2 = 0
+
+OUTPUT "ENTER STRING1: "
+INPUT string1
+OUTPUT "ENTER STRING2: "
+INPUT string2
+
+IF LENGTH(string1) <> LENGTH(string2) 
+  THEN 
+       OUTPUT " NOT ANAGRAMS"
+ELSE
+ 
+LCASE(string1)
+LCASE(string2)
+
+FOR Counter = 1 TO LENGTH(string1)
+
+var1 = var1 + ASC(MID(string1, counter, 1))
+var2 = var2 + ASC(MID(string2, counter, 1))
+
+NEXT Counter
+IF var1 = var2 
+  THEN
+ & " OUTPUT string1 & " AND string2 " are anagrams" 
+ELSE
+ OUTOUT string1 " AND " & string2 " are not anagrams"
