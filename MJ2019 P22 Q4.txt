@@ -1,0 +1,24 @@
+DECLARE NewString: STRING
+DECLARE InString: STRING
+DECLARE Index: INTEGER
+DECLARE Selected: INTEGER
+DECLARE NewValue: INTEGER
+DECLARE NextChar: CHARACTER
+NewString = ""
+Selected = 0
+InString = "12 34 5  39"
+FOR Index = 1 TO LENGTH(InString)
+NextChar = MID(InString, Index, 1)
+IF NextChar<"0" or NextChar>"9"
+ THEN
+   NewValue= STRING TO NUM(NewString)
+   IF NewValue> Selected 
+    THEN
+     Selected = NewValue
+   ENDIF
+   NewString= 0
+ELSE
+NewString = NewString & NextChar
+ENDIF
+NEXT Index
+OUTPUT Selected

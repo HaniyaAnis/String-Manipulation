@@ -1,0 +1,24 @@
+DECLARE string1 : STRING
+DECLARE string2 : STRING
+DECLARE space : INTEGER
+DECLARE FirstWord : STRING
+DECLARE SecondWord : STRING
+
+string1 = ""
+string2 = ""
+space = 0
+FirstWord = ""
+SecondWord = ""
+
+OUTPUT " ENTER FIRST STRING: "
+INPUT string1
+OUTPUT " ENTER SECOND STRING: "
+INPUT string2
+
+space = LOCATE(string1, ' ')
+FirstWord = LEFT(string1, space-1)
+
+space = LOCATE(string2, ' ')
+SecondWord = RIGHT(string2, LENGTH(string2)-space)
+
+OUTPUT " FINAL STRING ="  & FirstWord & " " & SecondWord

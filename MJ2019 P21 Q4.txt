@@ -1,0 +1,28 @@
+DECLARE NewString: STRING
+DECLARE Index: INTEGER
+DECLARE AfterSpace: BOOLEAN
+DECLARE NextChar: Char
+
+CONSTANT SPACE = " "
+CONSTANT InString = "X   Y  AND  Z"
+AfterSpace = FALSE
+NewString =""
+
+FOR Index = 1 TO LENGTH(InString)
+NextChar = MIDDLE(Instring, Index, )
+ IF AfterSpace = TRUE 
+  THEN
+     IF NextChar <> space 
+       THEN
+         NewString = NewString & NextChar
+         AfterSpace = FALSE
+     ENDIF
+  ELSE
+    NewString = NewString & NextChar
+     IF NextChar = space 
+      THEN
+        AfterSpace = TRUE
+     ENDIF
+ ENDIF
+NEXT Index
+   OUTPUT NewString    
