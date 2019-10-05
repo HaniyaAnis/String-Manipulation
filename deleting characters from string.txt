@@ -1,0 +1,31 @@
+DECLARE string1 : STRING
+DECLARE string2 : STRING
+DECLARE counter : INTEGER
+DECLARE NextChar: CHARACTER
+DECLARE DelChar : CHARACTER
+
+
+string1 = ""
+string2 = ""
+Counter = 0
+NextChar = ''
+DelChar = ''
+
+
+OUTPUT "ENTER STRING: "
+INPUT string1
+
+OUTPUT "ENTER CHARACTER TO BE DELETED: "
+INPUT DelChar
+
+FOR Counter = 1 TO LENGTH(string1)
+NextChar = MID(string1, Counter, 1)
+
+IF NextChar <> DelChar 
+  THEN  
+       string2 = string2 + NextChar
+ELSE
+   NEXT Counter 
+ENDIF
+
+OUTPUT "FINAL STRING IS: " & string2
