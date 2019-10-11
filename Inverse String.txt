@@ -1,0 +1,22 @@
+
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE index : INTEGER
+DECLARE nextchar : CHARACTER
+
+        str1 = ""
+        str2 = ""
+        index = 0
+        nextchar = ''
+
+       OUTPUT " ENTER STRING: "
+        INPUT str1
+
+        For index = 1 To LENGTH(str1)
+            nextchar = RIGHT(str1, index)
+            str2 = str2 & nextchar
+
+        Next
+
+        OUTPUT "inverse string: " & str2
+        
