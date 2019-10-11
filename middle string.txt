@@ -1,0 +1,21 @@
+DECLARE str1 : STRING
+DECLARE Midword : STRING
+DECLARE sp1 : INTEGER
+DECLARE sp2 : INTEGER
+
+str1 = ""
+Midword =""
+sp1 = 0
+sp2 = 0
+
+
+OUTPUT" ENTER STRING"
+INPUT str1
+
+sp1 = LOCATE(str1, ' ')
+sp2 = LOCATE(sp1+1, str1, ' ')
+Midword = MIDDLE(str1, sp1+1, sp2-sp1-1)
+
+OUTPUT " MIDDLE WORD IS ", Midword
+
+
